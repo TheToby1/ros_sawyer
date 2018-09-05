@@ -38,7 +38,7 @@ Next we need to set our ros version, run:
 $ cd ros_ws
 $ cp src/intera_sdk/intera.sh ./
 Using your preferred text editor change the line ros_version="indigo" to ros_version="kinetic"
-You made need to do this with root privelleges 
+You made need to do this with root privileges 
 
 Now the sdk can be run using
 $ ./intera.sh sim
@@ -57,4 +57,11 @@ Again run
 $ ./intera.sh sim
 And now
 $ rosrun intera_examples joint_torque_springs.py
-Should run an example piece of code which causes the gazebo robot move to it's home position
+Run an example piece of code which causes the gazebo robot move to its home position.
+
+All other examples should also run.
+These websites show how to use some of the basics.
+
+http://sdk.rethinkrobotics.com/intera/Workstation_Setup#Install_Intera_SDK_Dependencies
+http://sdk.rethinkrobotics.com/intera/MoveIt_Tutorial#Installation.2FPrerequisites
+http://sdk.rethinkrobotics.com/intera/Gazebo_Tutorial
