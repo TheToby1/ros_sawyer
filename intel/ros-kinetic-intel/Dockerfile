@@ -1,7 +1,13 @@
-FROM thewtex/opengl:latest
+FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         mesa-utils && \
+        # libgl1-mesa-dri \
+        # x11-xserver-utils \
+        # x11vnc \
+        # xinit \
+        # xserver-xorg-video-dummy \
+        # xserver-xorg-input-void && \
     rm -rf /var/lib/apt/lists/*
 
 # install packages
