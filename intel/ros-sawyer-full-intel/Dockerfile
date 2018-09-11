@@ -13,3 +13,5 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     ros-kinetic-sns-ik-lib \
     ros-kinetic-moveit \
     && rm -rf /var/lib/apt/lists/*
+
+RUN hg clone https://bitbucket.org/osrf/gazebo_models ~/.gazebo/models

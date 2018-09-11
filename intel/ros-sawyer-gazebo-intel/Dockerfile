@@ -12,3 +12,5 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     ros-kinetic-kdl-parser \
     ros-kinetic-sns-ik-lib \
   && rm -rf /var/lib/apt/lists/*
+
+RUN hg clone https://bitbucket.org/osrf/gazebo_models ~/.gazebo/models

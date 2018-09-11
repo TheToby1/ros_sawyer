@@ -2,9 +2,10 @@
 xhost +local:root
 
 docker run -it \
+--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+--device=/dev/dri:/dev/dri \
 --env="DISPLAY"  \
 --env="QT_X11_NO_MITSHM=1"  \
---volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --workdir="$PWD" \
 --volume="/home/$USER:/home/$USER" \
 --volume="/etc/group:/etc/group:ro" \

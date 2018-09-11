@@ -1,13 +1,15 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        mesa-utils && \
-        # libgl1-mesa-dri \
-        # x11-xserver-utils \
-        # x11vnc \
-        # xinit \
-        # xserver-xorg-video-dummy \
-        # xserver-xorg-input-void && \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        mesa-utils \
+        libgl1-mesa-glx \
+        libgl1-mesa-dri \
+        libgl1-mesa-dri \
+        x11-xserver-utils \
+        x11vnc \
+        xinit \
+        xserver-xorg-video-dummy \
+        xserver-xorg-input-void && \
     rm -rf /var/lib/apt/lists/*
 
 # install packages
