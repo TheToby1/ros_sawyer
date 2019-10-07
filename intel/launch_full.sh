@@ -15,6 +15,6 @@ docker run -it \
 -e LOCAL_USER_ID=`id -u $USER` \
 -e LOCAL_GROUP_ID=`id -g $USER` \
 -e LOCAL_GROUP_NAME=`id -gn $USER` \
- ros-sawyer-full-intel:latest bash
+--name='ros' ros-sawyer-full-intel:latest bash
 
 xhost -local:root

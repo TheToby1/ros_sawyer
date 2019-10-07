@@ -37,11 +37,9 @@ To start the simulation in gazebo run
 $ roslaunch sawyer_gazebo sawyer_world.launch
 Gazebo should start with a model of the sawyer
 
-Next run another terminal and cd to this directory
-You can now connect this terminal to your running docker container by getting its id
-$ docker ps
-and running
-$ docker exec -it <container-id> bash
+Next open another terminal and cd to this directory
+You can now connect this terminal to your running docker container 
+$ docker exec -it ros bash
 
 Then cd into the ros_ws
 Again run 

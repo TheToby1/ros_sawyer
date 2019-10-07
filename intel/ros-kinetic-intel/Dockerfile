@@ -1,23 +1,20 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        mesa-utils \
-        libgl1-mesa-glx \
-        libgl1-mesa-dri \
-        libgl1-mesa-dri \
-        x11-xserver-utils \
-        x11vnc \
-        xinit \
-        xserver-xorg-video-dummy \
-        xserver-xorg-input-void && \
-    rm -rf /var/lib/apt/lists/*
-
 # install packages
-RUN apt-get update && apt-get install -q -y \
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -q -y --no-install-recommends \
+    mesa-utils \
+    libgl1-mesa-glx \
+    libgl1-mesa-dri \
+    libgl1-mesa-dri \
+    x11-xserver-utils \
+    x11vnc \
+    xinit \
+    xserver-xorg-video-dummy \
+    xserver-xorg-input-void \
     dirmngr \
     gnupg2 \
-    lsb-release \
-    && rm -rf /var/lib/apt/lists/*
+    lsb-release  && \
+    rm -rf /var/lib/apt/lists/*
 
 # setup keys
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
